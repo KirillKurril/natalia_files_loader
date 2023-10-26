@@ -33,6 +33,7 @@ def main_function(message):
 
     with open(dir_path + '/' + doc_name, "wb") as file:
         file.write(requests.get(doc_url).content)
+        bot.reply_to(message, f"Всё прошло успешно 👍")
 
 @bot.message_handler(content_types=['photo'])
 def photo_loader(message):
